@@ -11,36 +11,37 @@ This document outlines the implementation plan for the `prompts-tui` project, ba
 
 - **Task 2: Implement the prompt list view**
     - Sub-task: Display a scrollable list of prompts fetched from `prompts-cli`.
+        - Test: Component test - Verify list renders with mock data from `prompts-cli`.
     - Sub-task: Implement keyboard navigation (up/down arrows).
-    - Test: Write a component test to verify the list rendering and navigation.
+        - Test: Component test - Simulate key presses and verify selection changes.
 
 ## Phase 2: Prompt Details and Interaction
 
 - **Task 3: Implement the prompt content view**
     - Sub-task: Display the full content of the selected prompt.
-    - Test: Write a component test to verify content display.
+    - Test: Component test - Verify content area displays selected prompt's content.
 
 - **Task 4: Implement in-TUI editing**
     - Sub-task: Allow editing of prompt content and metadata (tags, categories).
     - Sub-task: Integrate with `prompts-cli` for saving changes.
-    - Test: Write an E2E test to verify editing and saving.
+    - Test: E2E test - Simulate editing a prompt and verify changes persist via `prompts-cli`.
 
 ## Phase 3: Enhanced Features
 
 - **Task 5: Implement visual tag management**
     - Sub-task: Display tags with different colors.
     - Sub-task: Allow adding and removing tags from within the TUI.
-    - Test: Write component tests for tag display and interaction.
+    - Test: Component test - Verify tag rendering and interaction.
 
 - **Task 6: Implement fuzzy search integration**
     - Sub-task: Add a search bar to filter the prompt list in real-time using `prompts-cli`'s fuzzy search.
-    - Test: Write an E2E test to verify fuzzy search functionality.
+    - Test: E2E test - Simulate typing in search bar and verify filtered results.
 
 - **Task 7: Implement variable input**
     - Sub-task: When a templated prompt is selected, prompt the user for variable values.
     - Sub-task: Pass variables to `prompts-cli`'s `generate` command.
-    - Test: Write an E2E test to verify variable input and generation.
+    - Test: E2E test - Simulate selecting a templated prompt, entering variables, and verifying generated output.
 
 - **Task 8: Implement copy to clipboard**
     - Sub-task: Add a keybinding to copy the selected prompt's content to the clipboard.
-    - Test: Write an E2E test to verify clipboard functionality.
+    - Test: E2E test - Simulate key press and verify clipboard content.
